@@ -5,7 +5,7 @@ const JDBC = () => {
 
     static final String DB_URL = "jdbc:mysql://localhost:3306/testdb";
     static final String USER = "root";
-    static final String PASS = "";   // put your password here if set
+    static final String PASS = "";   
 
     public static void main(String[] args) {
 
