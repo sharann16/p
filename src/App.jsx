@@ -18,6 +18,7 @@ import DecessionTree from './components/DecessionTree'
 import Electricity from './components/Electricity'
 import Apriori from './components/Apriori'
 import Visualization from './components/Visualization'
+import Socker from './components/Socker'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -42,6 +43,7 @@ function App() {
         <Route path="/ecity" element={<Electricity/>} />
         <Route path="/apri" element={<Apriori/>} />
         <Route path="/vis" element={<Visualization/>} />
+        <Route path="/socket" element={<Socker/>} />
         <Route path="*" element={<Navigate to="/rmi" replace />} />
       </Routes>
       </BrowserRouter>
