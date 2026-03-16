@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import JDBC from './components/JDBC'
 import Payslip from './components/Payslip'
 import Purchase from './components/Purchase'
@@ -23,8 +23,9 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate to="/rmi" replace />} />
         <Route path="/rmi" element={<RMI />} />
         <Route path="/jdbc" element={<JDBC />} />
         <Route path="/ps" element={<Payslip/>} />
@@ -41,8 +42,9 @@ function App() {
         <Route path="/ecity" element={<Electricity/>} />
         <Route path="/apri" element={<Apriori/>} />
         <Route path="/vis" element={<Visualization/>} />
+        <Route path="*" element={<Navigate to="/rmi" replace />} />
       </Routes>
-      </HashRouter>
+      </BrowserRouter>
   )
   
 }
